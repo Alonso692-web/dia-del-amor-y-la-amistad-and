@@ -6,9 +6,18 @@ body {
     margin: 0;
     position: relative;
     overflow: hidden;
+    /* Cambiamos esto temporalmente */
     height: 100vh;
     background-color: #f8bbd0;
     /* Rosa pastel */
+    display: flex;
+    /* Agregamos esto */
+    flex-direction: column;
+    /* Agregamos esto */
+    justify-content: flex-start;
+    /* Agregamos esto */
+    align-items: center;
+    /* Agregamos esto */
 }
 
 /* Título */
@@ -28,6 +37,8 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 50px;
+    flex-grow: 1;
+    /* Agregamos esto */
 }
 
 /* Estilo de las cartas */
@@ -141,6 +152,10 @@ body {
 @media (max-width: 768px) {
     body {
         padding: 10px;
+        height: auto;
+        /* Cambiamos esto */
+        overflow: auto;
+        /* Cambiamos esto */
     }
 
     .title {
@@ -149,13 +164,17 @@ body {
         margin-bottom: 20px;
     }
 
+    .container {
+        margin-top: 20px;
+    }
+
     .cards {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
         /* Cambia a diseño flexible */
         gap: 10px;
         margin-top: 30px;
-        margin-bottom: 50px;
-        /* Agrega margen inferior */
+        margin-bottom: 20px;
+        /* Reducimos el margin-bottom */
     }
 
     .card {
