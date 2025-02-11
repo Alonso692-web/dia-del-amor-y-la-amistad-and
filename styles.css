@@ -136,3 +136,55 @@ body {
         opacity: 0;
     }
 }
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 3rem;
+        /* Reduce el tamaño del título */
+        margin-bottom: 20px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        /* Cambia a diseño flexible */
+        gap: 10px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        /* Agrega margen inferior */
+    }
+
+    .card {
+        width: 100%;
+        /* Ocupa todo el ancho disponible */
+        height: 150px;
+        /* Reduce la altura */
+    }
+
+    .card .front {
+        font-size: 2rem;
+        /* Reduce el tamaño del emoji */
+    }
+
+    .card .back {
+        font-size: 1rem;
+        /* Reduce el tamaño del texto en la parte trasera */
+        padding: 10px;
+    }
+
+    .heart {
+        font-size: 1.5rem;
+        /* Reduce el tamaño de los corazones */
+    }
+}
+
+@media (max-height: 500px) {
+    body {
+        height: auto;
+        /* Permite que el contenido se extienda verticalmente */
+    }
+}
